@@ -5,7 +5,7 @@
 
 
 header{
-    background-color: purple;
+    background-color: darkorchid;
     display:flex;
     justify-content:flex-start;
     align-items: center;
@@ -19,7 +19,8 @@ header{
     color:white;
 }
 .header-text p{
-    color:pink;
+    color:lightcyan;
+    font-style:italic;
 }
 
 
@@ -47,7 +48,7 @@ header{
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
-    color: #818181;
+    color: darkorchid;
     display: block;
     transition: 0.3s;
 }
@@ -76,19 +77,35 @@ header{
 
 
 
+.background{
+    min-height:100vh;
+    width:100%;
+    background-image: url('../assets/images/background.jpg');
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    display:flex;
+    justify-content: center;
+}
 main{
     display:flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
 }
+main h1{
+    font-style:italic;
+    color:rgb(50,50,30);
+}
 
 
 table, th , td{ 
-    border:1px solid black;
+    border:1px solid rgba(0,0,0,0.5);
     border-collapse: collapse;
 }
 
+tr:nth-child(odd){
+    background-color: white;
+}
 tr:nth-child(even){
     background-color: #f2f2f2;
 }
@@ -98,14 +115,31 @@ tr:hover {
 }
 
 th{
-    background-color:purple;
+    background-color:darkorchid;
     color:white;
 }
 
 th, td{
     padding:10px 30px;
+    text-align:center;
 }
 
 th:first-child, td:first-child{
     padding:5px;
+}
+th:not(:first-child){
+    text-align: center;
+}
+
+
+
+
+footer{
+    position:sticky;
+    display:flex;
+    justify-content: center;
+    background-color: black;
+    color:whitesmoke;
+    padding:5px;
+    font-size:13px;
 }

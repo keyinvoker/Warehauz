@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style/template.css">
     <script src="script/hamburger.js"></script>
     <link rel="icon" href="assets/images/warehouse-icon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- <a href="https://www.flaticon.com/free-icons/warehouse" title="warehouse icons">Warehouse icons created by Freepik - Flaticon</a> -->
     <title>Warehauz</title>
 </head>
@@ -40,62 +41,80 @@
         </div>
     </header>
 
+    <div class="background">
 
+        <!-- <div class="left-menu container">
+            <button class="btn btn-warning">INSERT</button>
+        </div> -->
 
-    <main id="main">
-        <h1>ITEMS TABLE</h1>
-        <table>
-            <tr>
-                <th>
-                    No.
-                </th>
-                <th>
-                    Name
-                </th>
-                <th>
-                    Quantity
-                </th>
-                <th>
-                    Description
-                </th>
-                <th>
-                    Last Edit
-                </th>
-            </tr>
+        <main id="main">
+            <h1>MY ITEMS</h1>
+            <table>
+                <tr>
+                    <th>
+                        No.
+                    </th>
+                    <th>
+                        Name
+                    </th>
+                    <th>
+                        Quantity
+                    </th>
+                    <th>
+                        Description
+                    </th>
+                    <th>
+                        Last Edit
+                    </th>
+                    <th>
+                        Action
+                    </th>
+                </tr>
 
-            <?php
-            include_once('script/connection.php');
-            $query = "SELECT * FROM items";
-            $queryResult = $conn->query($query);
+                <?php
+                include_once('script/connection.php');
+                $query = "SELECT * FROM items";
+                $queryResult = $conn->query($query);
 
-            while ($rows = mysqli_fetch_assoc($queryResult)) {
-                echo '
+                while ($rows = mysqli_fetch_assoc($queryResult)) {
+                    echo '
                 <tr>
                     <td>'
-                    . $rows['id'] . '.
+                        . $rows['id'] . '.
                     </td>
-                    <td style="text-align:center;">'
-                    . $rows['name'] .
-                    '</td>
-                    <td style="text-align:right;">'
-                    . $rows['qty'] .
-                    '</td>
-                    <td style="text-align:center;">'
-                    . $rows['description'] .
-                    '</td>
-                    <td style="text-align:center;">'
-                    . $rows['last_edit'] .
-                    '</td>
+                    <td>'
+                        . $rows['name'] .
+                        '</td>
+                    <td>'
+                        . $rows['qty'] .
+                        '</td>
+                    <td>'
+                        . $rows['description'] .
+                        '</td>
+                    <td>'
+                        . $rows['last_edit'] .
+                        '</td>
+                    <td>
+                        <button class="btn btn-primary">UPDATE</button>
+                        <button class="btn btn-danger">DELETE</button>
+                    </td>
                 </tr>';
-            }
-            ?>
-        </table>
-    </main>
+                }
+                ?>
+            </table>
+
+        </main>
+        <!-- <div class="right-menu container">
+            <button class="btn btn-warning">TEMP</button>
+        </div> -->
+
+    </div>
+
 
 
 
     <footer>
-
+        Copyright 2022 &copy; Joerio Christo Chandra
     </footer>
 
 </body>
