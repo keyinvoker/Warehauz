@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/template.css">
-    <link rel="stylesheet" href="style/hamburger.css">
     <script src="script/hamburger.js"></script>
     <link rel="icon" href="assets/images/warehouse-icon.png">
     <!-- <a href="https://www.flaticon.com/free-icons/warehouse" title="warehouse icons">Warehouse icons created by Freepik - Flaticon</a> -->
