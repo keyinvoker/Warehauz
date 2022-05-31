@@ -8,15 +8,32 @@
     <link rel="stylesheet" href="style/template.css">
     <link rel="stylesheet" href="style/hamburger.css">
     <script src="script/hamburger.js"></script>
+    <link rel="icon" href="assets/images/warehouse-icon.png">
+    <!-- <a href="https://www.flaticon.com/free-icons/warehouse" title="warehouse icons">Warehouse icons created by Freepik - Flaticon</a> -->
     <title>Warehauz</title>
 </head>
 
 <body>
 
     <header>
-        <div class="title">
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#">Home</a>
+            <a href="#">Items</a>
+            <a href="#">Contact</a>
+        </div>
+
+        <!-- Use any element to open the sidenav -->
+        <span class="hamburger-btn" onclick="openNav()">&#9776;</span>
+
+        <div class="header-img">
+            <a href="https://www.flaticon.com/free-icons/storage" title="storage icons" target="_blank">
+                <img src="assets/images/warehouse.png" alt="">
+            </a>
+        </div>
+        <div class="header-text">
             <h1>
-                WareHauz
+                WareHauz&trade;
             </h1>
             <p>
                 personal virtual warehouse
@@ -24,17 +41,10 @@
         </div>
     </header>
 
-    <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="#">Home</a>
-        <a href="#">Items</a>
-        <a href="#">Contact</a>
-    </div>
 
-    <!-- Use any element to open the sidenav -->
-    <span class="hamburger-btn" onclick="openNav()">&#9776; open</span>
 
     <main id="main">
+        <h1>ITEMS TABLE</h1>
         <table>
             <tr>
                 <th>
@@ -63,18 +73,18 @@
                 echo '
                 <tr>
                     <td>'
-                    . $rows['id'] .
-                    '</td>
-                    <td>'
+                    . $rows['id'] . '.
+                    </td>
+                    <td style="text-align:center;">'
                     . $rows['name'] .
                     '</td>
-                    <td>'
+                    <td style="text-align:right;">'
                     . $rows['qty'] .
                     '</td>
-                    <td>'
+                    <td style="text-align:center;">'
                     . $rows['description'] .
                     '</td>
-                    <td>'
+                    <td style="text-align:center;">'
                     . $rows['last_edit'] .
                     '</td>
                 </tr>';
